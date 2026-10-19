@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Book a safari or camping slot at Changa Manga Eco Resort."
+    />
+    <title>Register | Changa Manga Eco Resort &amp; Safari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:opsz,wght@6..72,400..600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="logo" href="index.html"
+          ><span class="logo-mark"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 2 6.5 10H9l-4 6h5.5v6h3v-6H19l-4-6h2.5z"
+              /></svg></span
+          ><span>Changa Manga<small>Eco Resort &amp; Safari</small></span></a
+        >
+        <input
+          type="checkbox"
+          id="nav-check"
+          class="nav-check"
+          aria-label="Toggle menu"
+        />
+        <label for="nav-check" class="nav-toggle">Menu</label>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li>
+              <a href="register.html" aria-current="page" class="nav-cta"
+                >Register</a
+              >
+            </li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="page-head">
+        <div class="container">
+          <h1>Book your safari</h1>
+          <p>Reserve a safari or camping slot. Fields marked * are required.</p>
+        </div>
+      </div>
+      <section class="tight">
+        <div class="container">
+          <form
+            id="bookingForm"
+            class="form-card"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                  pattern="[A-Za-z ]{3,50}"
+                  title="Letters only, 3 to 50 characters"
+                />
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="password"
+                  >Password <span class="req">*</span></label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="At least 8 characters"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="field">
+                <label for="date">Visit date</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  min="2026-10-15"
+                  max="2027-12-31"
+                />
+              </div>
+              <div class="field">
+                <label for="members">Members</label>
+                <input
+                  type="number"
+                  id="members"
+                  name="members"
+                  min="1"
+                  max="50"
+                  value="2"
+                />
+              </div>
+              <div class="field">
+                <label for="package">Package</label>
+                <select id="package" name="package">
+                  <option value="morning" data-price="1500">
+                    Morning safari, Rs. 1,500
+                  </option>
+                  <option value="evening" data-price="1500">
+                    Evening safari, Rs. 1,500
+                  </option>
+                  <option value="camping" data-price="3000">
+                    Night camping, Rs. 3,000
+                  </option>
+                  <option value="trek" data-price="800">
+                    Forest trek, Rs. 800
+                  </option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="idproof">ID proof</label>
+                <input
+                  type="file"
+                  id="idproof"
+                  name="idproof"
+                  accept=".jpg,.jpeg,.png,.pdf"
+                />
+              </div>
+              <div class="field">
+                <label for="favcolor">Favourite colour</label>
+                <input
+                  type="color"
+                  id="favcolor"
+                  name="favcolor"
+                  value="#1F3A27"
+                />
+              </div>
+              <div class="field">
+                <label for="time">Arrival time</label>
+                <input type="time" id="time" name="time" />
+              </div>
+              <div class="field">
+                <label for="satisfaction"
+                  >Expected satisfaction:
+                  <span id="satisfactionVal">5 / 10</span></label
+                >
+                <input
+                  type="range"
+                  id="satisfaction"
+                  name="satisfaction"
+                  min="0"
+                  max="10"
+                  value="5"
+                />
+              </div>
+              <fieldset class="field">
+                <legend>Gender</legend>
+                <div class="inline-options">
+                  <label
+                    ><input type="radio" name="gender" value="male" />
+                    Male</label
+                  >
+                  <label
+                    ><input type="radio" name="gender" value="female" />
+                    Female</label
+                  >
+                  <label
+                    ><input type="radio" name="gender" value="other" />
+                    Other</label
+                  >
+                </div>
+              </fieldset>
+              <div class="field">
+                <span class="legend-like">Forest rules</span>
+                <div class="inline-options">
+                  <label
+                    ><input type="checkbox" id="agree" name="agree" required />
+                    I agree to the forest rules
+                    <span class="req">*</span></label
+                  >
+                </div>
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Special requests: BBQ, guide language, wheelchair access"
+                ></textarea>
+              </div>
+            </div>
+            <p class="estimate">
+              Estimated total <strong id="total">Rs. 3,000</strong>
+            </p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Submit booking
+              </button>
+              <button type="reset" class="btn btn-outline">Reset</button>
+            </div>
+            <p class="form-msg" id="bookingMsg" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div class="foot-about">
+          <h4>Changa Manga</h4>
+          <p>
+            Eco resort and safari in Pakistan's largest man-made forest. Jungle
+            safaris, lakeside camping and guided treks.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Changa Manga Forest, Kasur District, Punjab</li>
+            <li>Open daily, 6:00 AM to 6:00 PM</li>
+            <li>info@changamanga.example</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Changa Manga Eco Resort &amp; Safari. All rights reserved.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
